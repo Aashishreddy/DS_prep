@@ -11,10 +11,12 @@ public class ReadingFiles {
 
         // READING FROM A FILE
         try(Stream<String> stream = Files.lines(Paths.get(filePath))){
-//            stream.forEach(System.out::println);
+//          stream.forEach(System.out::println);
             stream.forEach(line -> {
                 System.out.println(line);
             });
+          //  System.out.println(stream.filter(line -> line.startsWith("i")));
+
         }
 
         //WRITING TO A FILE
